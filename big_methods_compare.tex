@@ -370,7 +370,7 @@ prev_i = \operatorname{logit}\left(\beta_0 + \beta X + u_{s,t}\left(\rho, \sigma
 where $P_i$ is the observed number of positive cases, $prev_i$ is the estimated prevalence and $exa_i$ is the number of people tested.
 The linear predictor includes an intercept, $\beta_0$, regression coefficients, $\beta$, along with a matrix if covariates, $X$.
 We give $\beta_0$ and $\beta$ normal priors with mean 0 and sd of Todo.
-The random effect, $u_{s, t}\left\rho, \sigma, \alpa)\right)$ is a spatiotemporal effect.
+The random effect, $u_{s, t}\left(\rho, \sigma, \alpha)\right)$ is a spatiotemporal effect.
 It is a spatial random field with penalised complexity priors \cite{fugle} for the range and nominal sd such that $p(\rho<10) = 0.01$ and $p(\sigma > 0.4) = 0.01$.
 The temporal component is modelled by splitting the range of dates into 5 bins with each bin getting its own random effect.
 The correlation between the fields in each year bin is modelled as an ar1 process with a penalised complexity prior on the correlation between year bins such that $p(\alpha < 0.9) = 0.01$.
