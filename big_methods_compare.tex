@@ -140,9 +140,6 @@
 ]{\inits{JR}\fnm{Jennifer} \snm{Rozier}}
 \author[
    addressref={aff1}
-]{\inits{REH}\fnm{Rosalind E} \snm{Howes}}
-\author[
-   addressref={aff1}
 ]{\inits{PA}\fnm{Punam} \snm{Amratia}}
 \author[
    addressref={aff1}
@@ -155,9 +152,6 @@
 ]{\inits{ELC}\fnm{Emma L} \snm{Collins}}
 \author[
    addressref={aff1}
-]{\inits{MN}\fnm{Michele} \snm{Nguyen}}
-\author[
-   addressref={aff1}
 ]{\inits{SR}\fnm{Susan} \snm{Rumisha}}
 \author[
    addressref={aff1}
@@ -168,9 +162,6 @@
 \author[
    addressref={aff1}
 ]{\inits{PH}\fnm{Penelope} \snm{Hancock}}
-\author[
-   addressref={aff1}
-]{\inits{KEB}\fnm{Katherine E} \snm{Battle}}
 \author[
    addressref={aff1}
 ]{\inits{EC}\fnm{Ewan} \snm{Cameron}}
@@ -193,7 +184,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \address[id=aff1]{%                           % unique id
-  \orgname{Malaria Atlas Project, Big Data Institute}, % university, etc
+  \orgname{Big Data Institute}, % university, etc
   \street{Old Road Campus},                     %
   %\postcode{}                                % post or zip code
   \city{Oxford},                              % city
@@ -369,7 +360,7 @@ where $P_i$ is the observed number of positive cases, $prev_i$ is the estimated 
 The linear predictor includes an intercept, $\beta_0$, regression coefficients, $\beta$, along with a matrix if covariates, $X$.
 We give $\beta_0$ and $\beta$ normal priors with mean 0 and sd of Todo.
 The random effect, $u_{s, t}\left(\rho, \sigma, \alpha)\right)$ is a spatiotemporal effect.
-It is a spatial random field with penalised complexity priors \cite{fugle} for the range and nominal sd such that $p(\rho<10) = 0.01$ and $p(\sigma > 0.4) = 0.01$.
+It is a spatial random field with penalised complexity priors \cite{fuglstad2018constructing} for the range and nominal sd such that $p(\rho<10) = 0.01$ and $p(\sigma > 0.4) = 0.01$.
 The temporal component is modelled by splitting the range of dates into 5 bins with each bin getting its own random effect.
 The correlation between the fields in each year bin is modelled as an ar1 process with a penalised complexity prior on the correlation between year bins such that $p(\alpha < 0.9) = 0.01$.
 These models were fitted with INLA \cite{inla}.
@@ -408,8 +399,8 @@ These models were fitted with INLA \cite{inla}.
 %%% Weiss
 
 
-We used the covariates selected by a large covariate selection process described by \cite{weiss2005}.
-In \cite{weiss2005} they started with some standard covariates similar to the baseline set used here but then considered different spatial and temporal aggregations, transformations and interaction terms before selecting down to 20 covariates.
+We used the covariates selected by a large covariate selection process described by \cite{weiss2015re}.
+In \cite{weiss2015re} they started with some standard covariates similar to the baseline set used here but then considered different spatial and temporal aggregations, transformations and interaction terms before selecting down to 20 covariates.
 Instead of adding these covariates to the baseline covariate set, we tested it as a standalone set as the
 
 
@@ -427,7 +418,7 @@ random Fourier features.
 
 We tested a suite of standard machine learning models (M5--10): elastic net \cite{}, projection pursuit regression \cite{}, random forest \cite{ranger},  boosted regression trees \cite{xgboost}, Bayesian additive regressive trees \cite{} and single layer neutral networks \cite{nnet}.
 All models were trained with caret \cite{caret} using an inner three fold cross-validation scheme to select tuning parameters.
-When possible we used the one standard error rule \cite{Brodmann} whereby the model selected to be the final model was the simplest model with performance within one standard error of the best performing model.
+When possible we used the one standard error rule \cite{breiman1984classification} whereby the model selected to be the final model was the simplest model with performance within one standard error of the best performing model.
 For models with fewer than three tuning parameters we used grid search while for models with three or more parameters we used random search.
 Parameter values for testing were largely selected using caret's default ranges.
 
@@ -447,7 +438,7 @@ Three layer network
 %%% Ensemble methods
 
 We tested four methods that ensemble the predictions from section \ref{mlmethods} (M12--16).
-The first three are standard methods, model averaging weighting the models by their inner cross-validation MAE \cite{}, using Random forest to stack the models \cite{} and using model based geostatistics to stack the models (i.e. stacked generalisation as ok \cite{bhatt2016improved}.
+The first three are standard methods, model averaging weighting the models by their inner cross-validation MAE \cite{}, using Random forest to stack the models \cite{} and using model based geostatistics to stack the models (i.e. stacked generalisation as ok \cite{bhatt2017improved}.
 
 The final ensemble method is, to our knowledge, new.
 In this method we imagine that the performance of machine learning models will differ over space.
@@ -465,7 +456,7 @@ Here we examine the use of mosquito occurrence data, entomological inoculation r
 
 \section*{Results}
 
-\section{Discussion}
+\section*{Discussion}
 
 %\bibliographystyle{apalike} %or any other style you like
 
