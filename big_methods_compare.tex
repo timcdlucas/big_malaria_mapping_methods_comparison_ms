@@ -1,0 +1,481 @@
+
+%% BioMed_Central_Tex_Template_v1.06
+%%                                      %
+%  bmc_article.tex            ver: 1.06 %
+%                                       %
+
+%%IMPORTANT: do not delete the first line of this template
+%%It must be present to enable the BMC Submission system to
+%%recognise this template!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                     %%
+%%  LaTeX template for BioMed Central  %%
+%%     journal article submissions     %%
+%%                                     %%
+%%          <8 June 2012>              %%
+%%                                     %%
+%%                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% For instructions on how to fill out this Tex template           %%
+%% document please refer to Readme.html and the instructions for   %%
+%% authors page on the biomed central website                      %%
+%% http://www.biomedcentral.com/info/authors/                      %%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%% BioMed Central currently use the MikTex distribution of         %%
+%% TeX for Windows) of TeX and LaTeX.  This is available from      %%
+%% http://www.miktex.org                                           %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% additional documentclass options:
+%  [doublespacing]
+%  [linenumbers]   - put the line numbers on margins
+
+%%% loading packages, author definitions
+
+%\documentclass[twocolumn]{bmcart}% uncomment this for twocolumn layout and comment line below
+\documentclass{bmcart}
+
+%%% Load packages
+%\usepackage{amsthm,amsmath}
+%\RequirePackage{natbib}
+%\RequirePackage[authoryear]{natbib}% uncomment this for author-year bibliography
+%\RequirePackage{hyperref}
+\usepackage[utf8]{inputenc} %unicode support
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{amsmath}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                             %%
+%%  If you wish to display your graphics for   %%
+%%  your own use using includegraphic or       %%
+%%  includegraphics, then comment out the      %%
+%%  following two lines of code.               %%
+%%  NB: These line *must* be included when     %%
+%%  submitting to BMC.                         %%
+%%  All figure files must be submitted as      %%
+%%  separate graphics through the BMC          %%
+%%  submission process, not included in the    %%
+%%  submitted article.                         %%
+%%                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\def\includegraphic{}
+%\def\includegraphics{}
+
+
+
+%%% Put your definitions there:
+\startlocaldefs
+\endlocaldefs
+
+
+%%% Begin ...
+\begin{document}
+
+%%% Start of article front matter
+\begin{frontmatter}
+
+\begin{fmbox}
+\dochead{Research}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the title of your article here     %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Mapping IRS coverage at fine-scale across sub-Saharan Africa 1997 - 2017}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the authors here                   %%
+%%                                          %%
+%% Specify information, if available,       %%
+%% in the form:                             %%
+%%   <key>={<id1>,<id2>}                    %%
+%%   <key>=                                 %%
+%% Comment or delete the keys which are     %%
+%% not used. Repeat \author command as much %%
+%% as required.                             %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author[
+   addressref={aff1},                   % id's of addresses, e.g. {aff1,aff2}
+   corref={aff1},                       % id of corresponding address, if any
+  % noteref={n1},                        % id's of article notes, if any
+   email={anita.nandi@bdi.ox.ac.uk}   % email address
+]{\inits{AKN}\fnm{Anita K} \snm{Nandi}}
+\author[
+   addressref={aff1}
+]{\inits{TCDL}\fnm{Tim CD} \snm{Lucas}}
+\author[
+   addressref={aff1}
+]{\inits{JR}\fnm{Jennifer} \snm{Rozier}}
+\author[
+   addressref={aff1}
+]{\inits{REH}\fnm{Rosalind E} \snm{Howes}}
+\author[
+   addressref={aff1}
+]{\inits{PA}\fnm{Punam} \snm{Amratia}}
+\author[
+   addressref={aff1}
+]{\inits{EGC}\fnm{Elisabeth G} \snm{Chestnutt}}
+\author[
+   addressref={aff1}
+]{\inits{SHK}\fnm{Suzanne H} \snm{Keddie}}
+\author[
+   addressref={aff1}
+]{\inits{ELC}\fnm{Emma L} \snm{Collins}}
+\author[
+   addressref={aff1}
+]{\inits{MN}\fnm{Michele} \snm{Nguyen}}
+\author[
+   addressref={aff1}
+]{\inits{SR}\fnm{Susan} \snm{Rumisha}}
+\author[
+   addressref={aff1}
+]{\inits{AP}\fnm{Andre} \snm{Python}}
+\author[
+   addressref={aff1}
+]{\inits{RA}\fnm{Rohan} \snm{Arambepola}}
+\author[
+   addressref={aff1}
+]{\inits{AB}\fnm{Amelia} \snm{Bertozzi-Villa}}
+\author[
+   addressref={aff1}
+]{\inits{PH}\fnm{Penelope} \snm{Hancock}}
+\author[
+   addressref={aff1}
+]{\inits{KEB}\fnm{Katherine E} \snm{Battle}}
+\author[
+   addressref={aff1}
+]{\inits{EC}\fnm{Ewan} \snm{Cameron}}
+\author[
+   addressref={aff1}
+]{\inits{PWG}\fnm{Pete W} \snm{Gething}}
+\author[
+   addressref={aff1}
+]{\inits{DJW}\fnm{Daniel J} \snm{Weiss}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the authors' addresses here        %%
+%%                                          %%
+%% Repeat \address commands as much as      %%
+%% required.                                %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\address[id=aff1]{%                           % unique id
+  \orgname{Malaria Atlas Project, Big Data Institute}, % university, etc
+  \street{Old Road Campus},                     %
+  %\postcode{}                                % post or zip code
+  \city{Oxford},                              % city
+  \cny{UK}                                    % country
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter short notes here                   %%
+%%                                          %%
+%% Short notes will be after addresses      %%
+%% on first page.                           %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{artnotes}
+%\note{Sample of title note}     % note to the article
+%\note[id=n1]{Equal contributor} % note, connected to author
+\end{artnotes}
+
+\end{fmbox}% comment this for two column layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The Abstract begins here                 %%
+%%                                          %%
+%% Please refer to the Instructions for     %%
+%% authors on http://www.biomedcentral.com  %%
+%% and include the section headings         %%
+%% accordingly for your article type.       %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstractbox}
+
+\begin{abstract} % abstract
+\parttitle{Background} %if any
+Indoor residual spraying (IRS) is one of the main malaria control interventions. Mapping the distribution of IRS coverage at fine-scale is important for understanding what effect IRS has on malaria burden across Africa and for targeting interventions for the future.
+
+
+
+\parttitle{Methods} %if any
+A two-stage approach to map IRS usage across sub-Saharan Africa was used. Firstly, using Demographic Health Survey data from 2000 - 2016, a spatiotemporal geostatistical model was developed to predict the fine-scale structure of IRS coverage, defined by the proportion of household sprayed, across sub-Saharan Africa. The DHS data contained 19139 geolocated cluster surveys across 25 different countries between 2010 and 2016. Environmental and anthropological covariates at 5 x 5 km resolution were used to inform the model. In the second stage, coarse adminstrative level IRS covarage data across Africa was used calibrate the results of the geostatistical model. The final predictions from the model were validated against DHS data using performance metrics of correlation and RMSE, and this was compared with the previous best IRS coverage data at administrative level.
+
+\parttitle{Results} %if any
+{\color{red}Need to think of a sentence to say about the maps.} We found that high density of \emph{Anopheles gambiae} mosquitos, high temperature suitability index of \emph{Plasmodium falciparum}, and low elevation correlates with high IRS coverage. The fine-scale predictions of IRS coverage from 1997 - 2017 show better performance (higher correlation and lower RMSE) than the previous best estimates at adminstrative unit level when compared against DHS data.
+
+\parttitle{Conclusion} %if any
+This article provides the first high resolution (5 x 5 km) maps of IRS coverage across Africa between 1997 and 2017. These high resolution maps are important for informing future targetted interventions. More reliable information on IRS coverage with broader spatial and temporal data is needed to improve our understanding of one of the main malaria control interventions and its effect up malaria prevalence.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The keywords begin here                  %%
+%%                                          %%
+%% Put each keyword in separate \kwd{}.     %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{keyword}
+\kwd{Malaria}
+\kwd{Indoor residual spraying}
+\kwd{Geospatial modelling}
+\end{keyword}
+
+% MSC classifications codes, if any
+%\begin{keyword}[class=AMS]
+%\kwd[Primary ]{}
+%\kwd{}
+%\kwd[; secondary ]{}
+%\end{keyword}
+
+\end{abstractbox}
+%
+%\end{fmbox}% uncomment this for twcolumn layout
+
+\end{frontmatter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The Main Body begins here                %%
+%%                                          %%
+%% Please refer to the instructions for     %%
+%% authors on:                              %%
+%% http://www.biomedcentral.com/info/authors%%
+%% and include the section headings         %%
+%% accordingly for your article type.       %%
+%%                                          %%
+%% See the Results and Discussion section   %%
+%% for details on how to create sub-sections%%
+%%                                          %%
+%% use \cite{...} to cite references        %%
+%%  \cite{koon} and                         %%
+%%  \cite{oreg,khar,zvai,xjon,schn,pond}    %%
+%%  \nocite{smith,marg,hunn,advi,koha,mouse}%%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% start of article main body
+% <put your article body there>
+
+%%%%%%%%%%%%%%%%
+%% Background %%
+%%
+\section*{Background}
+% abstract
+
+Malaria is important and mapping is core
+mapping methods have been driven by malaria
+new methods or covariates rarely compared in comprehensive test on common benchmark dataset.
+here we compare new covariates and thirty methods.
+covariates include...
+methods include...
+
+
+% intro
+
+malaria is important and so is mapping
+
+new methods or covariates rarely compared on single dataset
+but see
+
+new covariates include...
+
+new methods include...
+
+here we find...
+
+
+% methods
+
+%% Overview
+
+We aimed to test both new covariates and new methods but did not want to test every combination of covariate and method.
+Therefore we first used a small set of methods (elastic net, random forest and mbg) to test a range of covariate sets.
+From these first comparisons we then defined two covariate sets to take forward and test with every method.
+
+%% cv and metrics
+
+
+We randomly selected 20\% of the data to hold out as a validation set.
+Our main performance metric was weighted mean absolute error (MAE) with the data being weighted by the survey sample size.
+We tested whether differences in performance were significant using a weighted Mann-Whitny U test with the data again weighted by survey sample size.
+
+It is difficult to compare methods in a fully fair way, especially when some methods have many tuning parameters.
+All tuning parameters were selected with an inner validation step.
+That is, the 80\% of data remaining after data splitting was then split again into train and valuation sets.
+However, there is no truly consistent way to decide how many sets of tuning parameters to try for each model.
+We therefore and to adhere to 2 principles.
+Firstly, we aimed to replicate realistic modelling behaviour.
+Notably, modellers generally do not select priors Bayesian spatial models using cross-validation due to both run the and fit philosophical reasons so that is generally how we fitted these models.
+Secondly, we aimed to try enough parameter sets that we were fairly confident that we would not find massive performance increases by broadening the search.
+The aim of the study is not to squeeze out every possible marginal gain as the relative results will change slightly with different datasets.
+
+%% pr data
+
+The prevalence survey data were extracted from the Malaria Atlas Project prevalence survey database using only data from 2000 onwards \cite{bhatt2015effect, guerra2007assembling, pfeffer2018ma}.
+We standardised days by diagnostic using models from \cite{}.
+The prevalence points were then standardised to an age range of 2--10 using the model from \cite{smith2007standardizing}.
+The final dataset contains 55,914 surveys in 44,842 distinct locations and represents samples from 5,687,304 individuals.
+
+%% Models for covariate comparison
+
+We used three models to compare different covariate sets; elastic net, random forest and model based geostatics.
+The models were chosen too be relatively simple but still able to learn from both spatial signal (mbg) and non-linear relationships between covariates and disease (Random Forest).
+Furthermore, we wanted methods that could easily handle the increased number of covariates (elastic net and random forest).
+
+We used elastic net \cite{enet} and optimised the penalty and LASSO/ridge fraction using an inner validation holdout set of 34% of the data.
+Similarly for Random Forest we optimised the split rule, mtry and the minimum node size using random search and a 34% holdout set.
+
+The model based geostatistics model was given by the hierarchical Bayesian equations
+\begin{align}
+P_i \sim Binom(prev_i, exa_i)
+prev_i = \operatorname{logit}\left(\beta_0 + \beta X + u_{s,t}\left(\rho, \sigma, \alpha\right)\right)
+\end{align}
+
+where $P_i$ is the observed number of positive cases, $prev_i$ is the estimated prevalence and $exa_i$ is the number of people tested.
+The linear predictor includes an intercept, $\beta_0$, regression coefficients, $\beta$, along with a matrix if covariates, $X$.
+We give $\beta_0$ and $\beta$ normal priors with mean 0 and sd of Todo.
+The random effect, $u_{s, t}\left\rho, \sigma, \alpa)\right)$ is a spatiotemporal effect.
+It is a spatial random field with penalised complexity priors \cite{fugle} for the range and nominal sd such that $p(\rho<10) = 0.01$ and $p(\sigma > 0.4) = 0.01$.
+The temporal component is modelled by splitting the range of dates into 5 bins with each bin getting its own random effect.
+The correlation between the fields in each year bin is modelled as an ar1 process with a penalised complexity prior on the correlation between year bins such that $p(\alpha < 0.9) = 0.01$.
+These models were fitted with INLA \cite{inla}.
+
+%spde <- inla.spde2.pcmatern(mesh = %mesh, alpha = 2,
+%                            prior.range = c(10, 0.01), %prior.sigma = c(0.4, 0.01))
+
+
+%h.spec <- list(theta=list(prior='pccor1', %param=c(0, 0.9)))
+%form <- as.formula(paste('pf_pos ~ b0 %+ 0 + f(field, model=spde, group = %field.group, control.group = %list(model="ar1", hyper=h.spec)) + ', %fixed))
+
+
+
+
+
+
+
+%% covariates
+
+%%% baseline
+
+
+%%% mosquito
+
+
+%%% accessibility
+
+
+%%% interventions and housing
+
+
+%%% world Bank
+
+
+
+%%% Weiss
+
+
+We used the covariates selected by a large covariate selection process described by \cite{weiss2005}.
+In \cite{weiss2005} they started with some standard covariates similar to the baseline set used here but then considered different spatial and temporal aggregations, transformations and interaction terms before selecting down to 20 covariates.
+Instead of adding these covariates to the baseline covariate set, we tested it as a standalone set as the
+
+
+%% expanded methods
+
+%%% Geostatistics
+
+We tested
+standard mbg with spatiotemporal field
+mbg with spatiotemporal field, month rw2 and year rw2.
+These were all fitted with INLA \cite{INLA}.
+random Fourier features.
+
+%%% Machine learning methods \label{mlmethods}
+
+We tested a suite of standard machine learning models (M5--10): elastic net \cite{}, projection pursuit regression \cite{}, random forest \cite{ranger},  boosted regression trees \cite{xgboost}, Bayesian additive regressive trees \cite{} and single layer neutral networks \cite{nnet}.
+All models were trained with caret \cite{caret} using an inner three fold cross-validation scheme to select tuning parameters.
+When possible we used the one standard error rule \cite{Brodmann} whereby the model selected to be the final model was the simplest model with performance within one standard error of the best performing model.
+For models with fewer than three tuning parameters we used grid search while for models with three or more parameters we used random search.
+Parameter values for testing were largely selected using caret's default ranges.
+
+%%% Spatial machine learning
+
+To include spatial information with machine learning methods we followed a modified version of the method by \cite{}.
+We choose 1000 locations by k means clustering of the PR data.
+We then created 1000 additional covariates such that covariate $j$ for data point $i$ was given by $1 / distance (x_i, x_j)$ where $x_i$ and $x_j$ are the spatial locations of data point $i$ and k cluster centre $j$ respectively.
+Using these additional covariates we fitted a random forest model (M11) as above.
+
+
+%%% Deep learning
+
+Three layer network
+
+
+%%% Ensemble methods
+
+We tested four methods that ensemble the predictions from section \ref{mlmethods} (M12--16).
+The first three are standard methods, model averaging weighting the models by their inner cross-validation MAE \cite{}, using Random forest to stack the models \cite{} and using model based geostatistics to stack the models (i.e. stacked generalisation as ok \cite{bhatt2016improved}.
+
+The final ensemble method is, to our knowledge, new.
+In this method we imagine that the performance of machine learning models will differ over space.
+We therefore fit a spatially varying intercepts model with the coefficients forced to be above one.
+The greater than one constraint forces the model to perform model averaging.
+By enforcing a greater than one constraint rather than a true sum to one constraint we also avoid the need for an additional, purely spatial random effect.
+
+
+%%% Transfer learning and data fusion
+
+Transfer learning and data fusion methods aim to use information from directly it indirectly related data.
+Here we examine the use of mosquito occurrence data, entomological inoculation rate data and lymphatic filariasis prevalence surveys (M17--20).
+
+
+
+% results
+
+% discussion
+
+%\bibliographystyle{apalike} %or any other style you like
+
+\bibliographystyle{plain}
+
+
+\bibliography{Malaria}
+
+
+
+\end{document}
