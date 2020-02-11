@@ -1,0 +1,106 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Professional Formal Letter
+% LaTeX Template
+% Version 2.0 (12/2/17)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Brian Moses
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt, a4paper]{letter} % Set the font size (10pt, 11pt and 12pt) and paper size (letterpaper, a4paper, etc)
+
+
+\usepackage[nodayofweek]{datetime}
+
+
+\usepackage[hidelinks]{hyperref}
+
+\setlength\longindentation{5cm}
+
+\input{structure.tex} % Include the file that specifies the document structure
+
+%\longindentation=0pt % Un-commenting this line will push the closing "Sincerely," and date to the left of the page
+
+%----------------------------------------------------------------------------------------
+%	YOUR INFORMATION
+%----------------------------------------------------------------------------------------
+
+\Who{Dr Tim C.D. Lucas} % Your name
+
+\Title{} % Your title, leave blank for no title
+
+\authordetails{
+	Big Data Institute\\ % Your department/institution
+	University of Oxford\\
+	OX3 7LF,, U.K.\\ % Your city, zip code, country, etc
+	timcdlucas@gmail.com\\ % Your email address
+	+44 (0) 7415863536\\ % Your phone number
+	\\
+	\today
+}
+
+%----------------------------------------------------------------------------------------
+%	HEADER CONTENTS
+%----------------------------------------------------------------------------------------
+
+\logo{oxford-logo.png} % Logo filename, your logo should have square dimensions (i.e. roughly the same width and height), if it does not, you will need to adjust spacing within the HEADER STRUCTURE block in structure.tex (read the comments carefully!)
+
+\headerlineone{UNIVERSITY} % Top header line, leave blank if you only want the bottom line
+
+\headerlinetwo{OF OXFORD} % Bottom header line
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TO ADDRESS
+%----------------------------------------------------------------------------------------
+
+\begin{letter}{
+Prof. Marcel Hommel
+Editor-in-Chief
+Malaria Journal
+}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\opening{Dear Prof. Marcel Hommel,}
+
+I am pleased to submit the article ``'' to be considered for publication in the Malaria Journal.
+There are two files: the main manuscript (tim-lucas-model-compare.pdf), the supplementary code (tim-lucas-model-compare.zip) and the supplementary material (tim-lucas-model-compare-si.pdf).
+
+
+
+
+\closing{Yours sincerely,}
+
+%----------------------------------------------------------------------------------------
+%	OPTIONAL FOOTNOTE
+%----------------------------------------------------------------------------------------
+
+% Uncomment the 4 lines below to print a footnote with custom text
+%\def\thefootnote{}
+%\def\footnoterule{\hrule}
+%\footnotetext{\hspace*{\fill}{\footnotesize\em Footnote text}}
+%\def\thefootnote{\arabic{footnote}}
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+
+\end{document}
