@@ -4,4 +4,6 @@
 .DS_Store
 *.aux
 *.spl
-
+*.bbl
+*.blg
+*.png
