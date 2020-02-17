@@ -308,22 +308,26 @@ malaria is important and so is mapping
 new methods or covariates rarely compared on single dataset
 but see
 
+covariates as important as model
+
 new covariates include...
 
 new methods include...
+
+Methods have different benefits.
 
 here we find...
 
 
 \section*{Methods}
 
-%% Overview
+\subsection*{Overview}
 
 We aimed to test both new covariates and new methods but did not want to test every combination of covariate and method.
-Therefore we first used a small set of methods (elastic net, random forest and mbg) to test a range of covariate sets.
+Therefore we first used a small set of methods (elastic net, random forest and model based geostatistics) to test a range of covariate sets.
 From these first comparisons we then defined two covariate sets to take forward and test with every method.
 
-%% cv and metrics
+\subsection*{Model Comparison and Performance Metrics}
 
 
 We randomly selected 20\% of the data to hold out as a validation set.
@@ -332,22 +336,24 @@ We tested whether differences in performance were significant using a weighted M
 
 It is difficult to compare methods in a fully fair way, especially when some methods have many tuning parameters.
 All tuning parameters were selected with an inner validation step.
-That is, the 80\% of data remaining after data splitting was then split again into train and valuation sets.
+That is, the 80\% of data remaining after data splitting was then split again into training and testing sets.
 However, there is no truly consistent way to decide how many sets of tuning parameters to try for each model.
-We therefore and to adhere to 2 principles.
+We therefore aimed to adhere to two principles.
 Firstly, we aimed to replicate realistic modelling behaviour.
-Notably, modellers generally do not select priors Bayesian spatial models using cross-validation due to both run the and fit philosophical reasons so that is generally how we fitted these models.
+Notably, modellers generally do not select priors in Bayesian spatial models using cross-validation due to both run time and for philosophical reasons so we also fitted these models by setting priors \emph{a priori}.
 Secondly, we aimed to try enough parameter sets that we were fairly confident that we would not find massive performance increases by broadening the search.
+For models with relatively few parameters this can be assessed visually.
 The aim of the study is not to squeeze out every possible marginal gain as the relative results will change slightly with different datasets.
 
-%% pr data
+\subsection*{Prevalence data}
 
 The prevalence survey data were extracted from the Malaria Atlas Project prevalence survey database using only data from 2000 onwards \cite{bhatt2015effect, guerra2007assembling, pfeffer2018ma}.
 We standardised days by diagnostic using models from \cite{}.
 The prevalence points were then standardised to an age range of 2--10 using the model from \cite{smith2007standardizing}.
 The final dataset contains 55,914 surveys in 44,842 distinct locations and represents samples from 5,687,304 individuals.
 
-%% Models for covariate comparison
+\subsection*{Models for covariate comparison}
+
 
 We used three models to compare different covariate sets; elastic net, random forest and model based geostatics.
 The models were chosen too be relatively simple but still able to learn from both spatial signal (mbg) and non-linear relationships between covariates and disease (Random Forest).
@@ -381,10 +387,8 @@ These models were fitted with INLA \cite{inla}.
 
 
 
+\subsection*{Further covariates}
 
-
-
-%% covariates
 
 %%% baseline
 
@@ -410,15 +414,17 @@ In \cite{weiss2015re} they started with some standard covariates similar to the 
 Instead of adding these covariates to the baseline covariate set, we tested it as a standalone set as the
 
 
-%% expanded methods
+\subsection*{Further methods}
+
 
 %%% Geostatistics
 
-We tested
-standard mbg with spatiotemporal field
-mbg with spatiotemporal field, month rw2 and year rw2.
+We tested standard model based geostatistics models with a spatiotemporal field
+ month rw2 and year rw2.
+ Monthly term not modelled as effectively as some other methods \cite{nguyen2020mapping}.
 These were all fitted with INLA \cite{INLA}.
 random Fourier features.
+
 
 %%% Machine learning methods \label{mlmethods}
 
